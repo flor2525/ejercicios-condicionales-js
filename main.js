@@ -5,13 +5,17 @@
 
 
 
-// puedeVerPelicula = (edad, tieneAutorizacion) =>{
+// const puedeVerPelicula = (edad, tieneAutorizacion) => {
 //     if (edad >= 15 || tieneAutorizacion === true){
-//         return true
+//         return true;
 //     } else {
-//         return false
+//         return false;
 //     }
 // }
+
+// Con retorno implícito...
+// const puedeVerPelicula = (edad, tieneAutorizacion) => edad >= 15 || tieneAutorizacion === 'true';
+
 
 // console.log(puedeVerPelicula(12, false));
 // console.log(puedeVerPelicula(12, true));
@@ -21,13 +25,16 @@
 
 // EJERCICIO 2 - estaEnRango(valor, minimo, maximo)
 
-// estaEnRango = (valor, minimo, maximo) => {
+// const estaEnRango = (valor, minimo, maximo) => {
 //     if (valor >= minimo && valor <= maximo){
-//         return true
+//         return true;
 //     } else {
-//         return false
+//         return false;
 //     }
 // }
+
+// Con retorno implícito...
+// const estaEnRango = (valor, minimo, maximo) => valor >= minimo && valor <= maximo;
 
 
 // console.log(estaEnRango(3, 1, 10));
@@ -44,7 +51,7 @@
 // const errorEnColor = () => 'Error: color de semáforo inválido';
 
 
-// puedeAvanzar = (color) => {
+// const puedeAvanzar = (color) => {
 //     if (color === 'verde'){
 //         return avanza();
 //     } else if (color === 'amarillo' || color === 'rojo'){
@@ -62,26 +69,16 @@
 
 // EJERCICIO 4 - esVocal(letra)
 
-// esVocal = (letra) => {
-//     if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u' ){
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+// const vocales = /^[aeiou]$/i
+// const esVocal = (letra) => vocales.test(letra);
 
 // console.log(esVocal('a'));
 // console.log(esVocal('n'));
 
 // EJERCICIO 5 - esConsonante(letra)
 
-// const esConsonante = (letra) => {
-//     if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u' ){
-//         return false;
-//     } else {
-//         return true;
-//     }
-// }
+ // const vocales = /^[aeiou]$/i
+// const esConstante = (letra) => !vocales.test(letra);  
 
 // console.log(esConsonante('a'));
 // console.log(esConsonante('n'));
@@ -176,7 +173,7 @@
 
 // const obtenerDiasMes = (mes) => {
 //     if (mes === 'abril' || mes === 'junio' || mes === 'septiembre' || mes === 'noviembre'){
-//     return 30;
+//          return 30;
 //     } else if (mes === 'febrero'){
 //         return 29;
 //     } else {
@@ -247,10 +244,10 @@
 // EJERCICIO 8 - jugarPiedraPapelTijera(a, b)
 
 // const jugarPiedraPapelTijera = (a, b) => {
-//     if ( a === b){
+//     if (a === b){
 //         return 'Es un empate';
 //     } else if ((a === 'tijera' && b === 'piedra') || (a === 'piedra' && b === 'tijera')){
-//     return 'Ganó piedra';
+//          return 'Ganó piedra';
 //     } else if ((a === 'papel' && b === 'piedra') || (a === 'piedra' && b === 'papel')){
 //         return 'Ganó papel';
 //     } else if ((a === 'tijera' && b === 'papel') || (a === 'papel' && b === 'tijera')){
